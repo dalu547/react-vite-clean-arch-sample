@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom'
 
 const linkBase = 'flex items-center gap-2 px-3 py-2 rounded-lg text-sm'
-const linkActive = 'bg-gray-100 text-gray-900 font-medium'
-const linkInactive = 'text-gray-700 hover:bg-gray-50'
+const linkActive = 'bg-brand/10 text-brand font-medium border-l-2 border-brand'
+const linkInactive = 'text-gray-800 hover:bg-black/5'
 
 export default function Sidebar() {
   return (
@@ -23,4 +23,3 @@ export default function Sidebar() {
     </aside>
   )
 }
-

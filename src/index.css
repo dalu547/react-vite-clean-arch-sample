@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --brand: 222 89% 55%;
-  --brand-foreground: 0 0% 100%;
+  /* Red / Black / White scheme */
+  --brand: 0 72% 50%; /* red */
+  --brand-foreground: 0 0% 100%; /* white */
 }
 
 @layer base {
-  * { @apply border-gray-200; }
-  body { @apply text-gray-900; }
+  * { @apply border-black/10; }
+  body { @apply text-black bg-white; }
 }

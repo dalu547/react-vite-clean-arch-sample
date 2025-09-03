@@ -31,4 +31,3 @@ export function ListView<T>({ items, getKey, renderItem, emptyState, className }
 }
 
 export default ListView
-
