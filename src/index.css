@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: 222 89% 55%;
+  --brand-foreground: 0 0% 100%;
+}
+
+@layer base {
+  * { @apply border-gray-200; }
+  body { @apply text-gray-900; }
+}
