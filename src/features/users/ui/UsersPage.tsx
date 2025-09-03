@@ -2,6 +2,7 @@ import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useUsers } from '../hooks/useUsers'
+import { ListView } from '@components/ui/list-view'
 
 const Schema = z.object({
   name: z.string().min(2, 'Name is too short'),
@@ -28,14 +29,17 @@ export default function UsersPage() {
     <div className="grid gap-6 sm:grid-cols-2">
       <section className="space-y-3">
         <h2 className="text-xl font-semibold">Users</h2>
-        <ul className="bg-white rounded-xl border divide-y">
-          {users.data?.map(u => (
-            <li key={u.id} className="p-3">
+        <ListView
+          items={users.data}
+          getKey={(u) => u.id}
+          renderItem={(u) => (
+            <div>
               <div className="font-medium">{u.name}</div>
               <div className="text-sm text-gray-600">{u.email}</div>
-            </li>
-          ))}
-        </ul>
+            </div>
+          )}
+          emptyState={<div>No users found</div>}
+        />
       </section>
 
       <section className="space-y-3">
