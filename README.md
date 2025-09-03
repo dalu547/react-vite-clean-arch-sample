@@ -76,6 +76,10 @@ Key files
 ## Architecture Overview
 Clean Architecture with a feature-first UI. Components act as Views; hooks are ViewModels that call use cases injected via DI.
 
+![Architecture Diagram](docs/react-vite-clean-arch-architecture.png)
+
+
+---
 
 
 ##  Flow
